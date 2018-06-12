@@ -19,7 +19,7 @@ syntax = "proto3";
 package protos;
 option java_package = "org.inklabsfoundation.inkchain.protos.peer";
 option go_package = "github.com/inklabsfoundation/inkchain/protos/peer";
-import "../google/protobuf/timestamp.proto";
+import "timestamp.proto";
 
 
 // Confidentiality Levels
