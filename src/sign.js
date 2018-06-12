@@ -1,52 +1,54 @@
 /**
- * Created by wangh09 on 2018/1/15.
+ * Created by zhangtailin on 2018/6/11.
  */
 
-var grpc = require('grpc');
-var _ccProto = grpc.load('protos/peer/chaincode.proto').protos;
+var _ccProto = require('../protos/chaincode_pb');
 var ethUtils = require('ethereumjs-util');
 var settingsConfig = require('./config');
 var Long = require('long');
+var textEncoding = require('text-encoding');
+var textEncoder = new textEncoding.TextEncoder("utf-8");
+var textDecoder = new textEncoding.TextDecoder("utf-8");
 var Wallet = require('./wallet').Wallet;
 
 var createAccount = function () {
     Wallet.generate();
-   return {"address": Wallet.getAddress(), "public_key": Wallet.getPubKey(), "private_key": Wallet.getPriKey()};
+    return {"address": Wallet.getAddress(), "public_key": Wallet.getPubKey(), "private_key": Wallet.getPriKey()};
 };
 
-var publicKeyFromPrivate = function (prikey) {
-    var pubkey = ethUtils.privateToPublic(Buffer.from(prikey, "hex"));
-    return pubkey.toString("hex");
+var addressFromPrivateKey = function (prikey) {
+    var address = ethUtils.privateToAddress(Buffer.from(prikey, "hex"));
+    return address.toString("hex");
 };
 
 var signTX = function (ccId, fcn, arg, msg, counter, inkLimit, priKey) {
     var args = [];
-    var senderAddress = ethUtils.privateToAddress(new Buffer(priKey, "hex"));
-    var senderSpec = {
-        sender: Buffer.from(settingsConfig.AddressPrefix + senderAddress.toString("hex")),
-        counter: Long.fromString(counter.toString()),
-        ink_limit: Buffer.from(inkLimit),
-        msg: Buffer.from(msg)
-    };
-    args.push(Buffer.from(fcn ? fcn : 'invoke', 'utf8'));
-    for (var i=0; i<arg.length; i++) {
-        args.push(Buffer.from(arg[i], 'utf8'));
+    args.push(textEncoder.encode(fcn ? fcn : 'invoke'));
+    for (var i = 0; i < arg.length; i++) {
+        args.push(textEncoder.encode(arg[i]));
     }
-    var invokeSpec = {
-        type: _ccProto.ChaincodeSpec.Type.GOLANG,
-        chaincode_id: {
-            name: ccId
-        },
-        input: {
-            args: args
-        }
-    };
-    var cciSpec = new _ccProto.ChaincodeInvocationSpec();
+
     var signContent = new _ccProto.SignContent();
-    signContent.setChaincodeSpec(invokeSpec);
+
+    var senderSpec = new _ccProto.SenderSpec();
+    var senderAddress = ethUtils.privateToAddress(new Buffer(priKey, "hex"));
+    senderSpec.setSender(textEncoder.encode(settingsConfig.AddressPrefix + senderAddress.toString("hex")));
+    senderSpec.setCounter(Long.fromString(counter.toString(), true));
+    senderSpec.setInkLimit(textEncoder.encode(inkLimit));
+    senderSpec.setMsg(textEncoder.encode(msg));
     signContent.setSenderSpec(senderSpec);
-    signContent.id_generation_alg = cciSpec.id_generation_alg;
-    var signHash = ethUtils.sha256(signContent.toBuffer());
+
+    var invokeSpec = new _ccProto.ChaincodeSpec();
+    invokeSpec.setType(_ccProto.ChaincodeSpec.Type.GOLANG);
+    var chaincde_id = new _ccProto.ChaincodeID();
+    chaincde_id.setName(ccId);
+    invokeSpec.setChaincodeId(chaincde_id);
+    var input = new _ccProto.ChaincodeInput();
+    input.setArgsList(args);
+    invokeSpec.setInput(input);
+    signContent.setChaincodeSpec(invokeSpec);
+    var bytes = signContent.serializeBinary();
+    var signHash = ethUtils.sha256(textDecoder.decode(bytes));
     var sigrsv = ethUtils.ecsign(signHash, new Buffer(priKey, "hex"));
 
     return Buffer.concat([
@@ -57,5 +59,5 @@ var signTX = function (ccId, fcn, arg, msg, counter, inkLimit, priKey) {
 };
 
 module.exports.createAccount = createAccount;
-module.exports.publicKeyFromPrivate = publicKeyFromPrivate;
+module.exports.addressFromPrivateKey = addressFromPrivateKey;
 module.exports.signTX = signTX;
