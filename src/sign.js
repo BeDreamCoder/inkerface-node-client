@@ -36,7 +36,7 @@ var signTX = function (ccId, fcn, arg, msg, counter, inkLimit, priKey) {
         msg: Buffer.from(msg)
     };
     args.push(Buffer.from(fcn ? fcn : 'invoke', 'utf8'));
-    for (var i=0; i<arg.length; i++) {
+    for (var i = 0; i < arg.length; i++) {
         args.push(Buffer.from(arg[i], 'utf8'));
     }
     var invokeSpec = {
@@ -60,6 +60,20 @@ var signTX = function (ccId, fcn, arg, msg, counter, inkLimit, priKey) {
         ethUtils.setLengthLeft(sigrsv.s, 32),
         ethUtils.toBuffer(sigrsv.v - 27)
     ]).toString("hex");
+};
+
+var isValidAddress = function (address) {
+    if (typeof address !== 'string') {
+        return false;
+    }
+    if (address.slice(0, 1) !== settingsConfig.AddressPrefix) {
+        return false;
+    }
+    return ethUtils.isValidAddress(ethUtils.addHexPrefix(address.slice(1)));
+};
+
+var isValidPrivate = function (prikey) {
+    return ethUtils.isValidPrivate(Buffer.from(prikey, "hex"));
 };
 
 /* use google-protobuf */
@@ -103,3 +117,5 @@ var signTX = function (ccId, fcn, arg, msg, counter, inkLimit, priKey) {
 module.exports.createAccount = createAccount;
 module.exports.addressFromPrivateKey = addressFromPrivateKey;
 module.exports.signTX = signTX;
+module.exports.isValidAddress = isValidAddress;
+module.exports.isValidPrivate = isValidPrivate;
