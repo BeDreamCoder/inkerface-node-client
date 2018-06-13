@@ -1,3 +1,4 @@
+/*eslint-disable*/
 /**
  * @fileoverview
  * @enhanceable
@@ -33,52 +34,52 @@ goog.exportSymbol('proto.protos.SignContent', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protos.ChaincodeID = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+proto.protos.ChaincodeID = function (opt_data) {
+    jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.protos.ChaincodeID, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.protos.ChaincodeID.displayName = 'proto.protos.ChaincodeID';
+    proto.protos.ChaincodeID.displayName = 'proto.protos.ChaincodeID';
 }
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.protos.ChaincodeID.prototype.toObject = function(opt_includeInstance) {
-  return proto.protos.ChaincodeID.toObject(opt_includeInstance, this);
-};
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.protos.ChaincodeID.prototype.toObject = function (opt_includeInstance) {
+        return proto.protos.ChaincodeID.toObject(opt_includeInstance, this);
+    };
 
 
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.protos.ChaincodeID} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.protos.ChaincodeID.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    path: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    version: jspb.Message.getFieldWithDefault(msg, 3, "")
-  };
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.protos.ChaincodeID} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.protos.ChaincodeID.toObject = function (includeInstance, msg) {
+        var f, obj = {
+            path: jspb.Message.getFieldWithDefault(msg, 1, ""),
+            name: jspb.Message.getFieldWithDefault(msg, 2, ""),
+            version: jspb.Message.getFieldWithDefault(msg, 3, "")
+        };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
 }
 
 
@@ -87,10 +88,10 @@ proto.protos.ChaincodeID.toObject = function(includeInstance, msg) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protos.ChaincodeID}
  */
-proto.protos.ChaincodeID.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protos.ChaincodeID;
-  return proto.protos.ChaincodeID.deserializeBinaryFromReader(msg, reader);
+proto.protos.ChaincodeID.deserializeBinary = function (bytes) {
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.protos.ChaincodeID;
+    return proto.protos.ChaincodeID.deserializeBinaryFromReader(msg, reader);
 };
 
 
@@ -101,31 +102,31 @@ proto.protos.ChaincodeID.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.protos.ChaincodeID}
  */
-proto.protos.ChaincodeID.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
+proto.protos.ChaincodeID.deserializeBinaryFromReader = function (msg, reader) {
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setPath(value);
+                break;
+            case 2:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setName(value);
+                break;
+            case 3:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setVersion(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
     }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPath(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setVersion(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
+    return msg;
 };
 
 
@@ -133,10 +134,10 @@ proto.protos.ChaincodeID.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protos.ChaincodeID.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.protos.ChaincodeID.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
+proto.protos.ChaincodeID.prototype.serializeBinary = function () {
+    var writer = new jspb.BinaryWriter();
+    proto.protos.ChaincodeID.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
 };
 
 
@@ -147,29 +148,29 @@ proto.protos.ChaincodeID.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protos.ChaincodeID.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getPath();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getName();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getVersion();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
+proto.protos.ChaincodeID.serializeBinaryToWriter = function (message, writer) {
+    var f = undefined;
+    f = message.getPath();
+    if (f.length > 0) {
+        writer.writeString(
+            1,
+            f
+        );
+    }
+    f = message.getName();
+    if (f.length > 0) {
+        writer.writeString(
+            2,
+            f
+        );
+    }
+    f = message.getVersion();
+    if (f.length > 0) {
+        writer.writeString(
+            3,
+            f
+        );
+    }
 };
 
 
@@ -177,14 +178,14 @@ proto.protos.ChaincodeID.serializeBinaryToWriter = function(message, writer) {
  * optional string path = 1;
  * @return {string}
  */
-proto.protos.ChaincodeID.prototype.getPath = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.protos.ChaincodeID.prototype.getPath = function () {
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.protos.ChaincodeID.prototype.setPath = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+proto.protos.ChaincodeID.prototype.setPath = function (value) {
+    jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -192,14 +193,14 @@ proto.protos.ChaincodeID.prototype.setPath = function(value) {
  * optional string name = 2;
  * @return {string}
  */
-proto.protos.ChaincodeID.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.protos.ChaincodeID.prototype.getName = function () {
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.protos.ChaincodeID.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+proto.protos.ChaincodeID.prototype.setName = function (value) {
+    jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -207,16 +208,15 @@ proto.protos.ChaincodeID.prototype.setName = function(value) {
  * optional string version = 3;
  * @return {string}
  */
-proto.protos.ChaincodeID.prototype.getVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.protos.ChaincodeID.prototype.getVersion = function () {
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.protos.ChaincodeID.prototype.setVersion = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+proto.protos.ChaincodeID.prototype.setVersion = function (value) {
+    jspb.Message.setProto3StringField(this, 3, value);
 };
-
 
 
 /**
@@ -229,12 +229,12 @@ proto.protos.ChaincodeID.prototype.setVersion = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protos.ChaincodeInput = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.protos.ChaincodeInput.repeatedFields_, null);
+proto.protos.ChaincodeInput = function (opt_data) {
+    jspb.Message.initialize(this, opt_data, 0, -1, proto.protos.ChaincodeInput.repeatedFields_, null);
 };
 goog.inherits(proto.protos.ChaincodeInput, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.protos.ChaincodeInput.displayName = 'proto.protos.ChaincodeInput';
+    proto.protos.ChaincodeInput.displayName = 'proto.protos.ChaincodeInput';
 }
 /**
  * List of repeated fields within this message type.
@@ -244,42 +244,41 @@ if (goog.DEBUG && !COMPILED) {
 proto.protos.ChaincodeInput.repeatedFields_ = [1];
 
 
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.protos.ChaincodeInput.prototype.toObject = function(opt_includeInstance) {
-  return proto.protos.ChaincodeInput.toObject(opt_includeInstance, this);
-};
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.protos.ChaincodeInput.prototype.toObject = function (opt_includeInstance) {
+        return proto.protos.ChaincodeInput.toObject(opt_includeInstance, this);
+    };
 
 
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.protos.ChaincodeInput} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.protos.ChaincodeInput.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    argsList: msg.getArgsList_asB64()
-  };
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.protos.ChaincodeInput} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.protos.ChaincodeInput.toObject = function (includeInstance, msg) {
+        var f, obj = {
+            argsList: msg.getArgsList_asB64()
+        };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
 }
 
 
@@ -288,10 +287,10 @@ proto.protos.ChaincodeInput.toObject = function(includeInstance, msg) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protos.ChaincodeInput}
  */
-proto.protos.ChaincodeInput.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protos.ChaincodeInput;
-  return proto.protos.ChaincodeInput.deserializeBinaryFromReader(msg, reader);
+proto.protos.ChaincodeInput.deserializeBinary = function (bytes) {
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.protos.ChaincodeInput;
+    return proto.protos.ChaincodeInput.deserializeBinaryFromReader(msg, reader);
 };
 
 
@@ -302,23 +301,23 @@ proto.protos.ChaincodeInput.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.protos.ChaincodeInput}
  */
-proto.protos.ChaincodeInput.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
+proto.protos.ChaincodeInput.deserializeBinaryFromReader = function (msg, reader) {
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = /** @type {!Uint8Array} */ (reader.readBytes());
+                msg.addArgs(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
     }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.addArgs(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
+    return msg;
 };
 
 
@@ -326,10 +325,10 @@ proto.protos.ChaincodeInput.deserializeBinaryFromReader = function(msg, reader) 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protos.ChaincodeInput.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.protos.ChaincodeInput.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
+proto.protos.ChaincodeInput.prototype.serializeBinary = function () {
+    var writer = new jspb.BinaryWriter();
+    proto.protos.ChaincodeInput.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
 };
 
 
@@ -340,15 +339,15 @@ proto.protos.ChaincodeInput.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protos.ChaincodeInput.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getArgsList_asU8();
-  if (f.length > 0) {
-    writer.writeRepeatedBytes(
-      1,
-      f
-    );
-  }
+proto.protos.ChaincodeInput.serializeBinaryToWriter = function (message, writer) {
+    var f = undefined;
+    f = message.getArgsList_asU8();
+    if (f.length > 0) {
+        writer.writeRepeatedBytes(
+            1,
+            f
+        );
+    }
 };
 
 
@@ -356,8 +355,8 @@ proto.protos.ChaincodeInput.serializeBinaryToWriter = function(message, writer) 
  * repeated bytes args = 1;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.protos.ChaincodeInput.prototype.getArgsList = function() {
-  return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 1));
+proto.protos.ChaincodeInput.prototype.getArgsList = function () {
+    return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
 
@@ -366,9 +365,9 @@ proto.protos.ChaincodeInput.prototype.getArgsList = function() {
  * This is a type-conversion wrapper around `getArgsList()`
  * @return {!Array.<string>}
  */
-proto.protos.ChaincodeInput.prototype.getArgsList_asB64 = function() {
-  return /** @type {!Array.<string>} */ (jspb.Message.bytesListAsB64(
-      this.getArgsList()));
+proto.protos.ChaincodeInput.prototype.getArgsList_asB64 = function () {
+    return /** @type {!Array.<string>} */ (jspb.Message.bytesListAsB64(
+        this.getArgsList()));
 };
 
 
@@ -379,15 +378,15 @@ proto.protos.ChaincodeInput.prototype.getArgsList_asB64 = function() {
  * This is a type-conversion wrapper around `getArgsList()`
  * @return {!Array.<!Uint8Array>}
  */
-proto.protos.ChaincodeInput.prototype.getArgsList_asU8 = function() {
-  return /** @type {!Array.<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
-      this.getArgsList()));
+proto.protos.ChaincodeInput.prototype.getArgsList_asU8 = function () {
+    return /** @type {!Array.<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
+        this.getArgsList()));
 };
 
 
 /** @param {!(Array<!Uint8Array>|Array<string>)} value */
-proto.protos.ChaincodeInput.prototype.setArgsList = function(value) {
-  jspb.Message.setField(this, 1, value || []);
+proto.protos.ChaincodeInput.prototype.setArgsList = function (value) {
+    jspb.Message.setField(this, 1, value || []);
 };
 
 
@@ -395,15 +394,14 @@ proto.protos.ChaincodeInput.prototype.setArgsList = function(value) {
  * @param {!(string|Uint8Array)} value
  * @param {number=} opt_index
  */
-proto.protos.ChaincodeInput.prototype.addArgs = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 1, value, opt_index);
+proto.protos.ChaincodeInput.prototype.addArgs = function (value, opt_index) {
+    jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
 
-proto.protos.ChaincodeInput.prototype.clearArgsList = function() {
-  this.setArgsList([]);
+proto.protos.ChaincodeInput.prototype.clearArgsList = function () {
+    this.setArgsList([]);
 };
-
 
 
 /**
@@ -416,53 +414,53 @@ proto.protos.ChaincodeInput.prototype.clearArgsList = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protos.ChaincodeSpec = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+proto.protos.ChaincodeSpec = function (opt_data) {
+    jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.protos.ChaincodeSpec, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.protos.ChaincodeSpec.displayName = 'proto.protos.ChaincodeSpec';
+    proto.protos.ChaincodeSpec.displayName = 'proto.protos.ChaincodeSpec';
 }
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.protos.ChaincodeSpec.prototype.toObject = function(opt_includeInstance) {
-  return proto.protos.ChaincodeSpec.toObject(opt_includeInstance, this);
-};
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.protos.ChaincodeSpec.prototype.toObject = function (opt_includeInstance) {
+        return proto.protos.ChaincodeSpec.toObject(opt_includeInstance, this);
+    };
 
 
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.protos.ChaincodeSpec} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.protos.ChaincodeSpec.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    type: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    chaincodeId: (f = msg.getChaincodeId()) && proto.protos.ChaincodeID.toObject(includeInstance, f),
-    input: (f = msg.getInput()) && proto.protos.ChaincodeInput.toObject(includeInstance, f),
-    timeout: jspb.Message.getFieldWithDefault(msg, 4, 0)
-  };
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.protos.ChaincodeSpec} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.protos.ChaincodeSpec.toObject = function (includeInstance, msg) {
+        var f, obj = {
+            type: jspb.Message.getFieldWithDefault(msg, 1, 0),
+            chaincodeId: (f = msg.getChaincodeId()) && proto.protos.ChaincodeID.toObject(includeInstance, f),
+            input: (f = msg.getInput()) && proto.protos.ChaincodeInput.toObject(includeInstance, f),
+            timeout: jspb.Message.getFieldWithDefault(msg, 4, 0)
+        };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
 }
 
 
@@ -471,10 +469,10 @@ proto.protos.ChaincodeSpec.toObject = function(includeInstance, msg) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protos.ChaincodeSpec}
  */
-proto.protos.ChaincodeSpec.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protos.ChaincodeSpec;
-  return proto.protos.ChaincodeSpec.deserializeBinaryFromReader(msg, reader);
+proto.protos.ChaincodeSpec.deserializeBinary = function (bytes) {
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.protos.ChaincodeSpec;
+    return proto.protos.ChaincodeSpec.deserializeBinaryFromReader(msg, reader);
 };
 
 
@@ -485,37 +483,37 @@ proto.protos.ChaincodeSpec.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.protos.ChaincodeSpec}
  */
-proto.protos.ChaincodeSpec.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
+proto.protos.ChaincodeSpec.deserializeBinaryFromReader = function (msg, reader) {
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = /** @type {!proto.protos.ChaincodeSpec.Type} */ (reader.readEnum());
+                msg.setType(value);
+                break;
+            case 2:
+                var value = new proto.protos.ChaincodeID;
+                reader.readMessage(value, proto.protos.ChaincodeID.deserializeBinaryFromReader);
+                msg.setChaincodeId(value);
+                break;
+            case 3:
+                var value = new proto.protos.ChaincodeInput;
+                reader.readMessage(value, proto.protos.ChaincodeInput.deserializeBinaryFromReader);
+                msg.setInput(value);
+                break;
+            case 4:
+                var value = /** @type {number} */ (reader.readInt32());
+                msg.setTimeout(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
     }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {!proto.protos.ChaincodeSpec.Type} */ (reader.readEnum());
-      msg.setType(value);
-      break;
-    case 2:
-      var value = new proto.protos.ChaincodeID;
-      reader.readMessage(value,proto.protos.ChaincodeID.deserializeBinaryFromReader);
-      msg.setChaincodeId(value);
-      break;
-    case 3:
-      var value = new proto.protos.ChaincodeInput;
-      reader.readMessage(value,proto.protos.ChaincodeInput.deserializeBinaryFromReader);
-      msg.setInput(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setTimeout(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
+    return msg;
 };
 
 
@@ -523,10 +521,10 @@ proto.protos.ChaincodeSpec.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protos.ChaincodeSpec.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.protos.ChaincodeSpec.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
+proto.protos.ChaincodeSpec.prototype.serializeBinary = function () {
+    var writer = new jspb.BinaryWriter();
+    proto.protos.ChaincodeSpec.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
 };
 
 
@@ -537,38 +535,38 @@ proto.protos.ChaincodeSpec.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protos.ChaincodeSpec.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getType();
-  if (f !== 0.0) {
-    writer.writeEnum(
-      1,
-      f
-    );
-  }
-  f = message.getChaincodeId();
-  if (f != null) {
-    writer.writeMessage(
-      2,
-      f,
-      proto.protos.ChaincodeID.serializeBinaryToWriter
-    );
-  }
-  f = message.getInput();
-  if (f != null) {
-    writer.writeMessage(
-      3,
-      f,
-      proto.protos.ChaincodeInput.serializeBinaryToWriter
-    );
-  }
-  f = message.getTimeout();
-  if (f !== 0) {
-    writer.writeInt32(
-      4,
-      f
-    );
-  }
+proto.protos.ChaincodeSpec.serializeBinaryToWriter = function (message, writer) {
+    var f = undefined;
+    f = message.getType();
+    if (f !== 0.0) {
+        writer.writeEnum(
+            1,
+            f
+        );
+    }
+    f = message.getChaincodeId();
+    if (f != null) {
+        writer.writeMessage(
+            2,
+            f,
+            proto.protos.ChaincodeID.serializeBinaryToWriter
+        );
+    }
+    f = message.getInput();
+    if (f != null) {
+        writer.writeMessage(
+            3,
+            f,
+            proto.protos.ChaincodeInput.serializeBinaryToWriter
+        );
+    }
+    f = message.getTimeout();
+    if (f !== 0) {
+        writer.writeInt32(
+            4,
+            f
+        );
+    }
 };
 
 
@@ -576,25 +574,25 @@ proto.protos.ChaincodeSpec.serializeBinaryToWriter = function(message, writer) {
  * @enum {number}
  */
 proto.protos.ChaincodeSpec.Type = {
-  UNDEFINED: 0,
-  GOLANG: 1,
-  NODE: 2,
-  CAR: 3,
-  JAVA: 4
+    UNDEFINED: 0,
+    GOLANG: 1,
+    NODE: 2,
+    CAR: 3,
+    JAVA: 4
 };
 
 /**
  * optional Type type = 1;
  * @return {!proto.protos.ChaincodeSpec.Type}
  */
-proto.protos.ChaincodeSpec.prototype.getType = function() {
-  return /** @type {!proto.protos.ChaincodeSpec.Type} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+proto.protos.ChaincodeSpec.prototype.getType = function () {
+    return /** @type {!proto.protos.ChaincodeSpec.Type} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /** @param {!proto.protos.ChaincodeSpec.Type} value */
-proto.protos.ChaincodeSpec.prototype.setType = function(value) {
-  jspb.Message.setProto3EnumField(this, 1, value);
+proto.protos.ChaincodeSpec.prototype.setType = function (value) {
+    jspb.Message.setProto3EnumField(this, 1, value);
 };
 
 
@@ -602,20 +600,20 @@ proto.protos.ChaincodeSpec.prototype.setType = function(value) {
  * optional ChaincodeID chaincode_id = 2;
  * @return {?proto.protos.ChaincodeID}
  */
-proto.protos.ChaincodeSpec.prototype.getChaincodeId = function() {
-  return /** @type{?proto.protos.ChaincodeID} */ (
-    jspb.Message.getWrapperField(this, proto.protos.ChaincodeID, 2));
+proto.protos.ChaincodeSpec.prototype.getChaincodeId = function () {
+    return /** @type{?proto.protos.ChaincodeID} */ (
+        jspb.Message.getWrapperField(this, proto.protos.ChaincodeID, 2));
 };
 
 
 /** @param {?proto.protos.ChaincodeID|undefined} value */
-proto.protos.ChaincodeSpec.prototype.setChaincodeId = function(value) {
-  jspb.Message.setWrapperField(this, 2, value);
+proto.protos.ChaincodeSpec.prototype.setChaincodeId = function (value) {
+    jspb.Message.setWrapperField(this, 2, value);
 };
 
 
-proto.protos.ChaincodeSpec.prototype.clearChaincodeId = function() {
-  this.setChaincodeId(undefined);
+proto.protos.ChaincodeSpec.prototype.clearChaincodeId = function () {
+    this.setChaincodeId(undefined);
 };
 
 
@@ -623,8 +621,8 @@ proto.protos.ChaincodeSpec.prototype.clearChaincodeId = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.protos.ChaincodeSpec.prototype.hasChaincodeId = function() {
-  return jspb.Message.getField(this, 2) != null;
+proto.protos.ChaincodeSpec.prototype.hasChaincodeId = function () {
+    return jspb.Message.getField(this, 2) != null;
 };
 
 
@@ -632,20 +630,20 @@ proto.protos.ChaincodeSpec.prototype.hasChaincodeId = function() {
  * optional ChaincodeInput input = 3;
  * @return {?proto.protos.ChaincodeInput}
  */
-proto.protos.ChaincodeSpec.prototype.getInput = function() {
-  return /** @type{?proto.protos.ChaincodeInput} */ (
-    jspb.Message.getWrapperField(this, proto.protos.ChaincodeInput, 3));
+proto.protos.ChaincodeSpec.prototype.getInput = function () {
+    return /** @type{?proto.protos.ChaincodeInput} */ (
+        jspb.Message.getWrapperField(this, proto.protos.ChaincodeInput, 3));
 };
 
 
 /** @param {?proto.protos.ChaincodeInput|undefined} value */
-proto.protos.ChaincodeSpec.prototype.setInput = function(value) {
-  jspb.Message.setWrapperField(this, 3, value);
+proto.protos.ChaincodeSpec.prototype.setInput = function (value) {
+    jspb.Message.setWrapperField(this, 3, value);
 };
 
 
-proto.protos.ChaincodeSpec.prototype.clearInput = function() {
-  this.setInput(undefined);
+proto.protos.ChaincodeSpec.prototype.clearInput = function () {
+    this.setInput(undefined);
 };
 
 
@@ -653,8 +651,8 @@ proto.protos.ChaincodeSpec.prototype.clearInput = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.protos.ChaincodeSpec.prototype.hasInput = function() {
-  return jspb.Message.getField(this, 3) != null;
+proto.protos.ChaincodeSpec.prototype.hasInput = function () {
+    return jspb.Message.getField(this, 3) != null;
 };
 
 
@@ -662,16 +660,15 @@ proto.protos.ChaincodeSpec.prototype.hasInput = function() {
  * optional int32 timeout = 4;
  * @return {number}
  */
-proto.protos.ChaincodeSpec.prototype.getTimeout = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+proto.protos.ChaincodeSpec.prototype.getTimeout = function () {
+    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /** @param {number} value */
-proto.protos.ChaincodeSpec.prototype.setTimeout = function(value) {
-  jspb.Message.setProto3IntField(this, 4, value);
+proto.protos.ChaincodeSpec.prototype.setTimeout = function (value) {
+    jspb.Message.setProto3IntField(this, 4, value);
 };
-
 
 
 /**
@@ -684,53 +681,53 @@ proto.protos.ChaincodeSpec.prototype.setTimeout = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protos.SenderSpec = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+proto.protos.SenderSpec = function (opt_data) {
+    jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.protos.SenderSpec, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.protos.SenderSpec.displayName = 'proto.protos.SenderSpec';
+    proto.protos.SenderSpec.displayName = 'proto.protos.SenderSpec';
 }
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.protos.SenderSpec.prototype.toObject = function(opt_includeInstance) {
-  return proto.protos.SenderSpec.toObject(opt_includeInstance, this);
-};
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.protos.SenderSpec.prototype.toObject = function (opt_includeInstance) {
+        return proto.protos.SenderSpec.toObject(opt_includeInstance, this);
+    };
 
 
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.protos.SenderSpec} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.protos.SenderSpec.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    sender: msg.getSender_asB64(),
-    counter: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    inkLimit: msg.getInkLimit_asB64(),
-    msg: msg.getMsg_asB64()
-  };
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.protos.SenderSpec} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.protos.SenderSpec.toObject = function (includeInstance, msg) {
+        var f, obj = {
+            sender: msg.getSender_asB64(),
+            counter: jspb.Message.getFieldWithDefault(msg, 2, 0),
+            inkLimit: msg.getInkLimit_asB64(),
+            msg: msg.getMsg_asB64()
+        };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
 }
 
 
@@ -739,10 +736,10 @@ proto.protos.SenderSpec.toObject = function(includeInstance, msg) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protos.SenderSpec}
  */
-proto.protos.SenderSpec.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protos.SenderSpec;
-  return proto.protos.SenderSpec.deserializeBinaryFromReader(msg, reader);
+proto.protos.SenderSpec.deserializeBinary = function (bytes) {
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.protos.SenderSpec;
+    return proto.protos.SenderSpec.deserializeBinaryFromReader(msg, reader);
 };
 
 
@@ -753,35 +750,35 @@ proto.protos.SenderSpec.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.protos.SenderSpec}
  */
-proto.protos.SenderSpec.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
+proto.protos.SenderSpec.deserializeBinaryFromReader = function (msg, reader) {
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = /** @type {!Uint8Array} */ (reader.readBytes());
+                msg.setSender(value);
+                break;
+            case 2:
+                var value = /** @type {number} */ (reader.readUint64());
+                msg.setCounter(value);
+                break;
+            case 3:
+                var value = /** @type {!Uint8Array} */ (reader.readBytes());
+                msg.setInkLimit(value);
+                break;
+            case 4:
+                var value = /** @type {!Uint8Array} */ (reader.readBytes());
+                msg.setMsg(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
     }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setSender(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setCounter(value);
-      break;
-    case 3:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setInkLimit(value);
-      break;
-    case 4:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setMsg(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
+    return msg;
 };
 
 
@@ -789,10 +786,10 @@ proto.protos.SenderSpec.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protos.SenderSpec.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.protos.SenderSpec.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
+proto.protos.SenderSpec.prototype.serializeBinary = function () {
+    var writer = new jspb.BinaryWriter();
+    proto.protos.SenderSpec.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
 };
 
 
@@ -803,36 +800,36 @@ proto.protos.SenderSpec.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protos.SenderSpec.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getSender_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
-      1,
-      f
-    );
-  }
-  f = message.getCounter();
-  if (f !== 0) {
-    writer.writeUint64(
-      2,
-      f
-    );
-  }
-  f = message.getInkLimit_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
-      3,
-      f
-    );
-  }
-  f = message.getMsg_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
-      4,
-      f
-    );
-  }
+proto.protos.SenderSpec.serializeBinaryToWriter = function (message, writer) {
+    var f = undefined;
+    f = message.getSender_asU8();
+    if (f.length > 0) {
+        writer.writeBytes(
+            1,
+            f
+        );
+    }
+    f = message.getCounter();
+    if (f !== 0) {
+        writer.writeUint64(
+            2,
+            f
+        );
+    }
+    f = message.getInkLimit_asU8();
+    if (f.length > 0) {
+        writer.writeBytes(
+            3,
+            f
+        );
+    }
+    f = message.getMsg_asU8();
+    if (f.length > 0) {
+        writer.writeBytes(
+            4,
+            f
+        );
+    }
 };
 
 
@@ -840,8 +837,8 @@ proto.protos.SenderSpec.serializeBinaryToWriter = function(message, writer) {
  * optional bytes sender = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.protos.SenderSpec.prototype.getSender = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.protos.SenderSpec.prototype.getSender = function () {
+    return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -850,9 +847,9 @@ proto.protos.SenderSpec.prototype.getSender = function() {
  * This is a type-conversion wrapper around `getSender()`
  * @return {string}
  */
-proto.protos.SenderSpec.prototype.getSender_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getSender()));
+proto.protos.SenderSpec.prototype.getSender_asB64 = function () {
+    return /** @type {string} */ (jspb.Message.bytesAsB64(
+        this.getSender()));
 };
 
 
@@ -863,15 +860,15 @@ proto.protos.SenderSpec.prototype.getSender_asB64 = function() {
  * This is a type-conversion wrapper around `getSender()`
  * @return {!Uint8Array}
  */
-proto.protos.SenderSpec.prototype.getSender_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getSender()));
+proto.protos.SenderSpec.prototype.getSender_asU8 = function () {
+    return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+        this.getSender()));
 };
 
 
 /** @param {!(string|Uint8Array)} value */
-proto.protos.SenderSpec.prototype.setSender = function(value) {
-  jspb.Message.setProto3BytesField(this, 1, value);
+proto.protos.SenderSpec.prototype.setSender = function (value) {
+    jspb.Message.setProto3BytesField(this, 1, value);
 };
 
 
@@ -879,14 +876,14 @@ proto.protos.SenderSpec.prototype.setSender = function(value) {
  * optional uint64 counter = 2;
  * @return {number}
  */
-proto.protos.SenderSpec.prototype.getCounter = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+proto.protos.SenderSpec.prototype.getCounter = function () {
+    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /** @param {number} value */
-proto.protos.SenderSpec.prototype.setCounter = function(value) {
-  jspb.Message.setProto3IntField(this, 2, value);
+proto.protos.SenderSpec.prototype.setCounter = function (value) {
+    jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -894,8 +891,8 @@ proto.protos.SenderSpec.prototype.setCounter = function(value) {
  * optional bytes ink_limit = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.protos.SenderSpec.prototype.getInkLimit = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.protos.SenderSpec.prototype.getInkLimit = function () {
+    return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
@@ -904,9 +901,9 @@ proto.protos.SenderSpec.prototype.getInkLimit = function() {
  * This is a type-conversion wrapper around `getInkLimit()`
  * @return {string}
  */
-proto.protos.SenderSpec.prototype.getInkLimit_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getInkLimit()));
+proto.protos.SenderSpec.prototype.getInkLimit_asB64 = function () {
+    return /** @type {string} */ (jspb.Message.bytesAsB64(
+        this.getInkLimit()));
 };
 
 
@@ -917,15 +914,15 @@ proto.protos.SenderSpec.prototype.getInkLimit_asB64 = function() {
  * This is a type-conversion wrapper around `getInkLimit()`
  * @return {!Uint8Array}
  */
-proto.protos.SenderSpec.prototype.getInkLimit_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getInkLimit()));
+proto.protos.SenderSpec.prototype.getInkLimit_asU8 = function () {
+    return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+        this.getInkLimit()));
 };
 
 
 /** @param {!(string|Uint8Array)} value */
-proto.protos.SenderSpec.prototype.setInkLimit = function(value) {
-  jspb.Message.setProto3BytesField(this, 3, value);
+proto.protos.SenderSpec.prototype.setInkLimit = function (value) {
+    jspb.Message.setProto3BytesField(this, 3, value);
 };
 
 
@@ -933,8 +930,8 @@ proto.protos.SenderSpec.prototype.setInkLimit = function(value) {
  * optional bytes msg = 4;
  * @return {!(string|Uint8Array)}
  */
-proto.protos.SenderSpec.prototype.getMsg = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.protos.SenderSpec.prototype.getMsg = function () {
+    return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
@@ -943,9 +940,9 @@ proto.protos.SenderSpec.prototype.getMsg = function() {
  * This is a type-conversion wrapper around `getMsg()`
  * @return {string}
  */
-proto.protos.SenderSpec.prototype.getMsg_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getMsg()));
+proto.protos.SenderSpec.prototype.getMsg_asB64 = function () {
+    return /** @type {string} */ (jspb.Message.bytesAsB64(
+        this.getMsg()));
 };
 
 
@@ -956,17 +953,16 @@ proto.protos.SenderSpec.prototype.getMsg_asB64 = function() {
  * This is a type-conversion wrapper around `getMsg()`
  * @return {!Uint8Array}
  */
-proto.protos.SenderSpec.prototype.getMsg_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getMsg()));
+proto.protos.SenderSpec.prototype.getMsg_asU8 = function () {
+    return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+        this.getMsg()));
 };
 
 
 /** @param {!(string|Uint8Array)} value */
-proto.protos.SenderSpec.prototype.setMsg = function(value) {
-  jspb.Message.setProto3BytesField(this, 4, value);
+proto.protos.SenderSpec.prototype.setMsg = function (value) {
+    jspb.Message.setProto3BytesField(this, 4, value);
 };
-
 
 
 /**
@@ -979,52 +975,52 @@ proto.protos.SenderSpec.prototype.setMsg = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protos.SignContent = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+proto.protos.SignContent = function (opt_data) {
+    jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.protos.SignContent, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.protos.SignContent.displayName = 'proto.protos.SignContent';
+    proto.protos.SignContent.displayName = 'proto.protos.SignContent';
 }
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.protos.SignContent.prototype.toObject = function(opt_includeInstance) {
-  return proto.protos.SignContent.toObject(opt_includeInstance, this);
-};
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.protos.SignContent.prototype.toObject = function (opt_includeInstance) {
+        return proto.protos.SignContent.toObject(opt_includeInstance, this);
+    };
 
 
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.protos.SignContent} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.protos.SignContent.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    chaincodeSpec: (f = msg.getChaincodeSpec()) && proto.protos.ChaincodeSpec.toObject(includeInstance, f),
-    idGenerationAlg: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    senderSpec: (f = msg.getSenderSpec()) && proto.protos.SenderSpec.toObject(includeInstance, f)
-  };
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.protos.SignContent} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.protos.SignContent.toObject = function (includeInstance, msg) {
+        var f, obj = {
+            chaincodeSpec: (f = msg.getChaincodeSpec()) && proto.protos.ChaincodeSpec.toObject(includeInstance, f),
+            idGenerationAlg: jspb.Message.getFieldWithDefault(msg, 2, ""),
+            senderSpec: (f = msg.getSenderSpec()) && proto.protos.SenderSpec.toObject(includeInstance, f)
+        };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
 }
 
 
@@ -1033,10 +1029,10 @@ proto.protos.SignContent.toObject = function(includeInstance, msg) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protos.SignContent}
  */
-proto.protos.SignContent.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protos.SignContent;
-  return proto.protos.SignContent.deserializeBinaryFromReader(msg, reader);
+proto.protos.SignContent.deserializeBinary = function (bytes) {
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.protos.SignContent;
+    return proto.protos.SignContent.deserializeBinaryFromReader(msg, reader);
 };
 
 
@@ -1047,33 +1043,33 @@ proto.protos.SignContent.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.protos.SignContent}
  */
-proto.protos.SignContent.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
+proto.protos.SignContent.deserializeBinaryFromReader = function (msg, reader) {
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = new proto.protos.ChaincodeSpec;
+                reader.readMessage(value, proto.protos.ChaincodeSpec.deserializeBinaryFromReader);
+                msg.setChaincodeSpec(value);
+                break;
+            case 2:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setIdGenerationAlg(value);
+                break;
+            case 3:
+                var value = new proto.protos.SenderSpec;
+                reader.readMessage(value, proto.protos.SenderSpec.deserializeBinaryFromReader);
+                msg.setSenderSpec(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
     }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = new proto.protos.ChaincodeSpec;
-      reader.readMessage(value,proto.protos.ChaincodeSpec.deserializeBinaryFromReader);
-      msg.setChaincodeSpec(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setIdGenerationAlg(value);
-      break;
-    case 3:
-      var value = new proto.protos.SenderSpec;
-      reader.readMessage(value,proto.protos.SenderSpec.deserializeBinaryFromReader);
-      msg.setSenderSpec(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
+    return msg;
 };
 
 
@@ -1081,10 +1077,10 @@ proto.protos.SignContent.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protos.SignContent.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.protos.SignContent.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
+proto.protos.SignContent.prototype.serializeBinary = function () {
+    var writer = new jspb.BinaryWriter();
+    proto.protos.SignContent.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
 };
 
 
@@ -1095,31 +1091,31 @@ proto.protos.SignContent.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protos.SignContent.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getChaincodeSpec();
-  if (f != null) {
-    writer.writeMessage(
-      1,
-      f,
-      proto.protos.ChaincodeSpec.serializeBinaryToWriter
-    );
-  }
-  f = message.getIdGenerationAlg();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getSenderSpec();
-  if (f != null) {
-    writer.writeMessage(
-      3,
-      f,
-      proto.protos.SenderSpec.serializeBinaryToWriter
-    );
-  }
+proto.protos.SignContent.serializeBinaryToWriter = function (message, writer) {
+    var f = undefined;
+    f = message.getChaincodeSpec();
+    if (f != null) {
+        writer.writeMessage(
+            1,
+            f,
+            proto.protos.ChaincodeSpec.serializeBinaryToWriter
+        );
+    }
+    f = message.getIdGenerationAlg();
+    if (f.length > 0) {
+        writer.writeString(
+            2,
+            f
+        );
+    }
+    f = message.getSenderSpec();
+    if (f != null) {
+        writer.writeMessage(
+            3,
+            f,
+            proto.protos.SenderSpec.serializeBinaryToWriter
+        );
+    }
 };
 
 
@@ -1127,20 +1123,20 @@ proto.protos.SignContent.serializeBinaryToWriter = function(message, writer) {
  * optional ChaincodeSpec chaincode_spec = 1;
  * @return {?proto.protos.ChaincodeSpec}
  */
-proto.protos.SignContent.prototype.getChaincodeSpec = function() {
-  return /** @type{?proto.protos.ChaincodeSpec} */ (
-    jspb.Message.getWrapperField(this, proto.protos.ChaincodeSpec, 1));
+proto.protos.SignContent.prototype.getChaincodeSpec = function () {
+    return /** @type{?proto.protos.ChaincodeSpec} */ (
+        jspb.Message.getWrapperField(this, proto.protos.ChaincodeSpec, 1));
 };
 
 
 /** @param {?proto.protos.ChaincodeSpec|undefined} value */
-proto.protos.SignContent.prototype.setChaincodeSpec = function(value) {
-  jspb.Message.setWrapperField(this, 1, value);
+proto.protos.SignContent.prototype.setChaincodeSpec = function (value) {
+    jspb.Message.setWrapperField(this, 1, value);
 };
 
 
-proto.protos.SignContent.prototype.clearChaincodeSpec = function() {
-  this.setChaincodeSpec(undefined);
+proto.protos.SignContent.prototype.clearChaincodeSpec = function () {
+    this.setChaincodeSpec(undefined);
 };
 
 
@@ -1148,8 +1144,8 @@ proto.protos.SignContent.prototype.clearChaincodeSpec = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.protos.SignContent.prototype.hasChaincodeSpec = function() {
-  return jspb.Message.getField(this, 1) != null;
+proto.protos.SignContent.prototype.hasChaincodeSpec = function () {
+    return jspb.Message.getField(this, 1) != null;
 };
 
 
@@ -1157,14 +1153,14 @@ proto.protos.SignContent.prototype.hasChaincodeSpec = function() {
  * optional string id_generation_alg = 2;
  * @return {string}
  */
-proto.protos.SignContent.prototype.getIdGenerationAlg = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.protos.SignContent.prototype.getIdGenerationAlg = function () {
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.protos.SignContent.prototype.setIdGenerationAlg = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+proto.protos.SignContent.prototype.setIdGenerationAlg = function (value) {
+    jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1172,20 +1168,20 @@ proto.protos.SignContent.prototype.setIdGenerationAlg = function(value) {
  * optional SenderSpec sender_spec = 3;
  * @return {?proto.protos.SenderSpec}
  */
-proto.protos.SignContent.prototype.getSenderSpec = function() {
-  return /** @type{?proto.protos.SenderSpec} */ (
-    jspb.Message.getWrapperField(this, proto.protos.SenderSpec, 3));
+proto.protos.SignContent.prototype.getSenderSpec = function () {
+    return /** @type{?proto.protos.SenderSpec} */ (
+        jspb.Message.getWrapperField(this, proto.protos.SenderSpec, 3));
 };
 
 
 /** @param {?proto.protos.SenderSpec|undefined} value */
-proto.protos.SignContent.prototype.setSenderSpec = function(value) {
-  jspb.Message.setWrapperField(this, 3, value);
+proto.protos.SignContent.prototype.setSenderSpec = function (value) {
+    jspb.Message.setWrapperField(this, 3, value);
 };
 
 
-proto.protos.SignContent.prototype.clearSenderSpec = function() {
-  this.setSenderSpec(undefined);
+proto.protos.SignContent.prototype.clearSenderSpec = function () {
+    this.setSenderSpec(undefined);
 };
 
 
@@ -1193,10 +1189,9 @@ proto.protos.SignContent.prototype.clearSenderSpec = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.protos.SignContent.prototype.hasSenderSpec = function() {
-  return jspb.Message.getField(this, 3) != null;
+proto.protos.SignContent.prototype.hasSenderSpec = function () {
+    return jspb.Message.getField(this, 3) != null;
 };
-
 
 
 /**
@@ -1209,53 +1204,53 @@ proto.protos.SignContent.prototype.hasSenderSpec = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protos.ChaincodeDeploymentSpec = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+proto.protos.ChaincodeDeploymentSpec = function (opt_data) {
+    jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.protos.ChaincodeDeploymentSpec, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.protos.ChaincodeDeploymentSpec.displayName = 'proto.protos.ChaincodeDeploymentSpec';
+    proto.protos.ChaincodeDeploymentSpec.displayName = 'proto.protos.ChaincodeDeploymentSpec';
 }
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.protos.ChaincodeDeploymentSpec.prototype.toObject = function(opt_includeInstance) {
-  return proto.protos.ChaincodeDeploymentSpec.toObject(opt_includeInstance, this);
-};
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.protos.ChaincodeDeploymentSpec.prototype.toObject = function (opt_includeInstance) {
+        return proto.protos.ChaincodeDeploymentSpec.toObject(opt_includeInstance, this);
+    };
 
 
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.protos.ChaincodeDeploymentSpec} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.protos.ChaincodeDeploymentSpec.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    chaincodeSpec: (f = msg.getChaincodeSpec()) && proto.protos.ChaincodeSpec.toObject(includeInstance, f),
-    effectiveDate: (f = msg.getEffectiveDate()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    codePackage: msg.getCodePackage_asB64(),
-    execEnv: jspb.Message.getFieldWithDefault(msg, 4, 0)
-  };
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.protos.ChaincodeDeploymentSpec} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.protos.ChaincodeDeploymentSpec.toObject = function (includeInstance, msg) {
+        var f, obj = {
+            chaincodeSpec: (f = msg.getChaincodeSpec()) && proto.protos.ChaincodeSpec.toObject(includeInstance, f),
+            effectiveDate: (f = msg.getEffectiveDate()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+            codePackage: msg.getCodePackage_asB64(),
+            execEnv: jspb.Message.getFieldWithDefault(msg, 4, 0)
+        };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
 }
 
 
@@ -1264,10 +1259,10 @@ proto.protos.ChaincodeDeploymentSpec.toObject = function(includeInstance, msg) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protos.ChaincodeDeploymentSpec}
  */
-proto.protos.ChaincodeDeploymentSpec.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protos.ChaincodeDeploymentSpec;
-  return proto.protos.ChaincodeDeploymentSpec.deserializeBinaryFromReader(msg, reader);
+proto.protos.ChaincodeDeploymentSpec.deserializeBinary = function (bytes) {
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.protos.ChaincodeDeploymentSpec;
+    return proto.protos.ChaincodeDeploymentSpec.deserializeBinaryFromReader(msg, reader);
 };
 
 
@@ -1278,37 +1273,37 @@ proto.protos.ChaincodeDeploymentSpec.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.protos.ChaincodeDeploymentSpec}
  */
-proto.protos.ChaincodeDeploymentSpec.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
+proto.protos.ChaincodeDeploymentSpec.deserializeBinaryFromReader = function (msg, reader) {
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = new proto.protos.ChaincodeSpec;
+                reader.readMessage(value, proto.protos.ChaincodeSpec.deserializeBinaryFromReader);
+                msg.setChaincodeSpec(value);
+                break;
+            case 2:
+                var value = new google_protobuf_timestamp_pb.Timestamp;
+                reader.readMessage(value, google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+                msg.setEffectiveDate(value);
+                break;
+            case 3:
+                var value = /** @type {!Uint8Array} */ (reader.readBytes());
+                msg.setCodePackage(value);
+                break;
+            case 4:
+                var value = /** @type {!proto.protos.ChaincodeDeploymentSpec.ExecutionEnvironment} */ (reader.readEnum());
+                msg.setExecEnv(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
     }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = new proto.protos.ChaincodeSpec;
-      reader.readMessage(value,proto.protos.ChaincodeSpec.deserializeBinaryFromReader);
-      msg.setChaincodeSpec(value);
-      break;
-    case 2:
-      var value = new google_protobuf_timestamp_pb.Timestamp;
-      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-      msg.setEffectiveDate(value);
-      break;
-    case 3:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setCodePackage(value);
-      break;
-    case 4:
-      var value = /** @type {!proto.protos.ChaincodeDeploymentSpec.ExecutionEnvironment} */ (reader.readEnum());
-      msg.setExecEnv(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
+    return msg;
 };
 
 
@@ -1316,10 +1311,10 @@ proto.protos.ChaincodeDeploymentSpec.deserializeBinaryFromReader = function(msg,
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protos.ChaincodeDeploymentSpec.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.protos.ChaincodeDeploymentSpec.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
+proto.protos.ChaincodeDeploymentSpec.prototype.serializeBinary = function () {
+    var writer = new jspb.BinaryWriter();
+    proto.protos.ChaincodeDeploymentSpec.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
 };
 
 
@@ -1330,38 +1325,38 @@ proto.protos.ChaincodeDeploymentSpec.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protos.ChaincodeDeploymentSpec.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getChaincodeSpec();
-  if (f != null) {
-    writer.writeMessage(
-      1,
-      f,
-      proto.protos.ChaincodeSpec.serializeBinaryToWriter
-    );
-  }
-  f = message.getEffectiveDate();
-  if (f != null) {
-    writer.writeMessage(
-      2,
-      f,
-      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
-    );
-  }
-  f = message.getCodePackage_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
-      3,
-      f
-    );
-  }
-  f = message.getExecEnv();
-  if (f !== 0.0) {
-    writer.writeEnum(
-      4,
-      f
-    );
-  }
+proto.protos.ChaincodeDeploymentSpec.serializeBinaryToWriter = function (message, writer) {
+    var f = undefined;
+    f = message.getChaincodeSpec();
+    if (f != null) {
+        writer.writeMessage(
+            1,
+            f,
+            proto.protos.ChaincodeSpec.serializeBinaryToWriter
+        );
+    }
+    f = message.getEffectiveDate();
+    if (f != null) {
+        writer.writeMessage(
+            2,
+            f,
+            google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+        );
+    }
+    f = message.getCodePackage_asU8();
+    if (f.length > 0) {
+        writer.writeBytes(
+            3,
+            f
+        );
+    }
+    f = message.getExecEnv();
+    if (f !== 0.0) {
+        writer.writeEnum(
+            4,
+            f
+        );
+    }
 };
 
 
@@ -1369,28 +1364,28 @@ proto.protos.ChaincodeDeploymentSpec.serializeBinaryToWriter = function(message,
  * @enum {number}
  */
 proto.protos.ChaincodeDeploymentSpec.ExecutionEnvironment = {
-  DOCKER: 0,
-  SYSTEM: 1
+    DOCKER: 0,
+    SYSTEM: 1
 };
 
 /**
  * optional ChaincodeSpec chaincode_spec = 1;
  * @return {?proto.protos.ChaincodeSpec}
  */
-proto.protos.ChaincodeDeploymentSpec.prototype.getChaincodeSpec = function() {
-  return /** @type{?proto.protos.ChaincodeSpec} */ (
-    jspb.Message.getWrapperField(this, proto.protos.ChaincodeSpec, 1));
+proto.protos.ChaincodeDeploymentSpec.prototype.getChaincodeSpec = function () {
+    return /** @type{?proto.protos.ChaincodeSpec} */ (
+        jspb.Message.getWrapperField(this, proto.protos.ChaincodeSpec, 1));
 };
 
 
 /** @param {?proto.protos.ChaincodeSpec|undefined} value */
-proto.protos.ChaincodeDeploymentSpec.prototype.setChaincodeSpec = function(value) {
-  jspb.Message.setWrapperField(this, 1, value);
+proto.protos.ChaincodeDeploymentSpec.prototype.setChaincodeSpec = function (value) {
+    jspb.Message.setWrapperField(this, 1, value);
 };
 
 
-proto.protos.ChaincodeDeploymentSpec.prototype.clearChaincodeSpec = function() {
-  this.setChaincodeSpec(undefined);
+proto.protos.ChaincodeDeploymentSpec.prototype.clearChaincodeSpec = function () {
+    this.setChaincodeSpec(undefined);
 };
 
 
@@ -1398,8 +1393,8 @@ proto.protos.ChaincodeDeploymentSpec.prototype.clearChaincodeSpec = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.protos.ChaincodeDeploymentSpec.prototype.hasChaincodeSpec = function() {
-  return jspb.Message.getField(this, 1) != null;
+proto.protos.ChaincodeDeploymentSpec.prototype.hasChaincodeSpec = function () {
+    return jspb.Message.getField(this, 1) != null;
 };
 
 
@@ -1407,20 +1402,20 @@ proto.protos.ChaincodeDeploymentSpec.prototype.hasChaincodeSpec = function() {
  * optional google.protobuf.Timestamp effective_date = 2;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.protos.ChaincodeDeploymentSpec.prototype.getEffectiveDate = function() {
-  return /** @type{?proto.google.protobuf.Timestamp} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 2));
+proto.protos.ChaincodeDeploymentSpec.prototype.getEffectiveDate = function () {
+    return /** @type{?proto.google.protobuf.Timestamp} */ (
+        jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 2));
 };
 
 
 /** @param {?proto.google.protobuf.Timestamp|undefined} value */
-proto.protos.ChaincodeDeploymentSpec.prototype.setEffectiveDate = function(value) {
-  jspb.Message.setWrapperField(this, 2, value);
+proto.protos.ChaincodeDeploymentSpec.prototype.setEffectiveDate = function (value) {
+    jspb.Message.setWrapperField(this, 2, value);
 };
 
 
-proto.protos.ChaincodeDeploymentSpec.prototype.clearEffectiveDate = function() {
-  this.setEffectiveDate(undefined);
+proto.protos.ChaincodeDeploymentSpec.prototype.clearEffectiveDate = function () {
+    this.setEffectiveDate(undefined);
 };
 
 
@@ -1428,8 +1423,8 @@ proto.protos.ChaincodeDeploymentSpec.prototype.clearEffectiveDate = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.protos.ChaincodeDeploymentSpec.prototype.hasEffectiveDate = function() {
-  return jspb.Message.getField(this, 2) != null;
+proto.protos.ChaincodeDeploymentSpec.prototype.hasEffectiveDate = function () {
+    return jspb.Message.getField(this, 2) != null;
 };
 
 
@@ -1437,8 +1432,8 @@ proto.protos.ChaincodeDeploymentSpec.prototype.hasEffectiveDate = function() {
  * optional bytes code_package = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.protos.ChaincodeDeploymentSpec.prototype.getCodePackage = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.protos.ChaincodeDeploymentSpec.prototype.getCodePackage = function () {
+    return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
@@ -1447,9 +1442,9 @@ proto.protos.ChaincodeDeploymentSpec.prototype.getCodePackage = function() {
  * This is a type-conversion wrapper around `getCodePackage()`
  * @return {string}
  */
-proto.protos.ChaincodeDeploymentSpec.prototype.getCodePackage_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getCodePackage()));
+proto.protos.ChaincodeDeploymentSpec.prototype.getCodePackage_asB64 = function () {
+    return /** @type {string} */ (jspb.Message.bytesAsB64(
+        this.getCodePackage()));
 };
 
 
@@ -1460,15 +1455,15 @@ proto.protos.ChaincodeDeploymentSpec.prototype.getCodePackage_asB64 = function()
  * This is a type-conversion wrapper around `getCodePackage()`
  * @return {!Uint8Array}
  */
-proto.protos.ChaincodeDeploymentSpec.prototype.getCodePackage_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getCodePackage()));
+proto.protos.ChaincodeDeploymentSpec.prototype.getCodePackage_asU8 = function () {
+    return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+        this.getCodePackage()));
 };
 
 
 /** @param {!(string|Uint8Array)} value */
-proto.protos.ChaincodeDeploymentSpec.prototype.setCodePackage = function(value) {
-  jspb.Message.setProto3BytesField(this, 3, value);
+proto.protos.ChaincodeDeploymentSpec.prototype.setCodePackage = function (value) {
+    jspb.Message.setProto3BytesField(this, 3, value);
 };
 
 
@@ -1476,16 +1471,15 @@ proto.protos.ChaincodeDeploymentSpec.prototype.setCodePackage = function(value) 
  * optional ExecutionEnvironment exec_env = 4;
  * @return {!proto.protos.ChaincodeDeploymentSpec.ExecutionEnvironment}
  */
-proto.protos.ChaincodeDeploymentSpec.prototype.getExecEnv = function() {
-  return /** @type {!proto.protos.ChaincodeDeploymentSpec.ExecutionEnvironment} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+proto.protos.ChaincodeDeploymentSpec.prototype.getExecEnv = function () {
+    return /** @type {!proto.protos.ChaincodeDeploymentSpec.ExecutionEnvironment} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /** @param {!proto.protos.ChaincodeDeploymentSpec.ExecutionEnvironment} value */
-proto.protos.ChaincodeDeploymentSpec.prototype.setExecEnv = function(value) {
-  jspb.Message.setProto3EnumField(this, 4, value);
+proto.protos.ChaincodeDeploymentSpec.prototype.setExecEnv = function (value) {
+    jspb.Message.setProto3EnumField(this, 4, value);
 };
-
 
 
 /**
@@ -1498,53 +1492,53 @@ proto.protos.ChaincodeDeploymentSpec.prototype.setExecEnv = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protos.ChaincodeInvocationSpec = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+proto.protos.ChaincodeInvocationSpec = function (opt_data) {
+    jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.protos.ChaincodeInvocationSpec, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.protos.ChaincodeInvocationSpec.displayName = 'proto.protos.ChaincodeInvocationSpec';
+    proto.protos.ChaincodeInvocationSpec.displayName = 'proto.protos.ChaincodeInvocationSpec';
 }
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.protos.ChaincodeInvocationSpec.prototype.toObject = function(opt_includeInstance) {
-  return proto.protos.ChaincodeInvocationSpec.toObject(opt_includeInstance, this);
-};
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.protos.ChaincodeInvocationSpec.prototype.toObject = function (opt_includeInstance) {
+        return proto.protos.ChaincodeInvocationSpec.toObject(opt_includeInstance, this);
+    };
 
 
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.protos.ChaincodeInvocationSpec} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.protos.ChaincodeInvocationSpec.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    chaincodeSpec: (f = msg.getChaincodeSpec()) && proto.protos.ChaincodeSpec.toObject(includeInstance, f),
-    idGenerationAlg: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    senderSpec: (f = msg.getSenderSpec()) && proto.protos.SenderSpec.toObject(includeInstance, f),
-    sig: msg.getSig_asB64()
-  };
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.protos.ChaincodeInvocationSpec} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.protos.ChaincodeInvocationSpec.toObject = function (includeInstance, msg) {
+        var f, obj = {
+            chaincodeSpec: (f = msg.getChaincodeSpec()) && proto.protos.ChaincodeSpec.toObject(includeInstance, f),
+            idGenerationAlg: jspb.Message.getFieldWithDefault(msg, 2, ""),
+            senderSpec: (f = msg.getSenderSpec()) && proto.protos.SenderSpec.toObject(includeInstance, f),
+            sig: msg.getSig_asB64()
+        };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
 }
 
 
@@ -1553,10 +1547,10 @@ proto.protos.ChaincodeInvocationSpec.toObject = function(includeInstance, msg) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protos.ChaincodeInvocationSpec}
  */
-proto.protos.ChaincodeInvocationSpec.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protos.ChaincodeInvocationSpec;
-  return proto.protos.ChaincodeInvocationSpec.deserializeBinaryFromReader(msg, reader);
+proto.protos.ChaincodeInvocationSpec.deserializeBinary = function (bytes) {
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.protos.ChaincodeInvocationSpec;
+    return proto.protos.ChaincodeInvocationSpec.deserializeBinaryFromReader(msg, reader);
 };
 
 
@@ -1567,37 +1561,37 @@ proto.protos.ChaincodeInvocationSpec.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.protos.ChaincodeInvocationSpec}
  */
-proto.protos.ChaincodeInvocationSpec.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
+proto.protos.ChaincodeInvocationSpec.deserializeBinaryFromReader = function (msg, reader) {
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = new proto.protos.ChaincodeSpec;
+                reader.readMessage(value, proto.protos.ChaincodeSpec.deserializeBinaryFromReader);
+                msg.setChaincodeSpec(value);
+                break;
+            case 2:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setIdGenerationAlg(value);
+                break;
+            case 3:
+                var value = new proto.protos.SenderSpec;
+                reader.readMessage(value, proto.protos.SenderSpec.deserializeBinaryFromReader);
+                msg.setSenderSpec(value);
+                break;
+            case 4:
+                var value = /** @type {!Uint8Array} */ (reader.readBytes());
+                msg.setSig(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
     }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = new proto.protos.ChaincodeSpec;
-      reader.readMessage(value,proto.protos.ChaincodeSpec.deserializeBinaryFromReader);
-      msg.setChaincodeSpec(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setIdGenerationAlg(value);
-      break;
-    case 3:
-      var value = new proto.protos.SenderSpec;
-      reader.readMessage(value,proto.protos.SenderSpec.deserializeBinaryFromReader);
-      msg.setSenderSpec(value);
-      break;
-    case 4:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setSig(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
+    return msg;
 };
 
 
@@ -1605,10 +1599,10 @@ proto.protos.ChaincodeInvocationSpec.deserializeBinaryFromReader = function(msg,
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protos.ChaincodeInvocationSpec.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.protos.ChaincodeInvocationSpec.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
+proto.protos.ChaincodeInvocationSpec.prototype.serializeBinary = function () {
+    var writer = new jspb.BinaryWriter();
+    proto.protos.ChaincodeInvocationSpec.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
 };
 
 
@@ -1619,38 +1613,38 @@ proto.protos.ChaincodeInvocationSpec.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protos.ChaincodeInvocationSpec.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getChaincodeSpec();
-  if (f != null) {
-    writer.writeMessage(
-      1,
-      f,
-      proto.protos.ChaincodeSpec.serializeBinaryToWriter
-    );
-  }
-  f = message.getIdGenerationAlg();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getSenderSpec();
-  if (f != null) {
-    writer.writeMessage(
-      3,
-      f,
-      proto.protos.SenderSpec.serializeBinaryToWriter
-    );
-  }
-  f = message.getSig_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
-      4,
-      f
-    );
-  }
+proto.protos.ChaincodeInvocationSpec.serializeBinaryToWriter = function (message, writer) {
+    var f = undefined;
+    f = message.getChaincodeSpec();
+    if (f != null) {
+        writer.writeMessage(
+            1,
+            f,
+            proto.protos.ChaincodeSpec.serializeBinaryToWriter
+        );
+    }
+    f = message.getIdGenerationAlg();
+    if (f.length > 0) {
+        writer.writeString(
+            2,
+            f
+        );
+    }
+    f = message.getSenderSpec();
+    if (f != null) {
+        writer.writeMessage(
+            3,
+            f,
+            proto.protos.SenderSpec.serializeBinaryToWriter
+        );
+    }
+    f = message.getSig_asU8();
+    if (f.length > 0) {
+        writer.writeBytes(
+            4,
+            f
+        );
+    }
 };
 
 
@@ -1658,20 +1652,20 @@ proto.protos.ChaincodeInvocationSpec.serializeBinaryToWriter = function(message,
  * optional ChaincodeSpec chaincode_spec = 1;
  * @return {?proto.protos.ChaincodeSpec}
  */
-proto.protos.ChaincodeInvocationSpec.prototype.getChaincodeSpec = function() {
-  return /** @type{?proto.protos.ChaincodeSpec} */ (
-    jspb.Message.getWrapperField(this, proto.protos.ChaincodeSpec, 1));
+proto.protos.ChaincodeInvocationSpec.prototype.getChaincodeSpec = function () {
+    return /** @type{?proto.protos.ChaincodeSpec} */ (
+        jspb.Message.getWrapperField(this, proto.protos.ChaincodeSpec, 1));
 };
 
 
 /** @param {?proto.protos.ChaincodeSpec|undefined} value */
-proto.protos.ChaincodeInvocationSpec.prototype.setChaincodeSpec = function(value) {
-  jspb.Message.setWrapperField(this, 1, value);
+proto.protos.ChaincodeInvocationSpec.prototype.setChaincodeSpec = function (value) {
+    jspb.Message.setWrapperField(this, 1, value);
 };
 
 
-proto.protos.ChaincodeInvocationSpec.prototype.clearChaincodeSpec = function() {
-  this.setChaincodeSpec(undefined);
+proto.protos.ChaincodeInvocationSpec.prototype.clearChaincodeSpec = function () {
+    this.setChaincodeSpec(undefined);
 };
 
 
@@ -1679,8 +1673,8 @@ proto.protos.ChaincodeInvocationSpec.prototype.clearChaincodeSpec = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.protos.ChaincodeInvocationSpec.prototype.hasChaincodeSpec = function() {
-  return jspb.Message.getField(this, 1) != null;
+proto.protos.ChaincodeInvocationSpec.prototype.hasChaincodeSpec = function () {
+    return jspb.Message.getField(this, 1) != null;
 };
 
 
@@ -1688,14 +1682,14 @@ proto.protos.ChaincodeInvocationSpec.prototype.hasChaincodeSpec = function() {
  * optional string id_generation_alg = 2;
  * @return {string}
  */
-proto.protos.ChaincodeInvocationSpec.prototype.getIdGenerationAlg = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.protos.ChaincodeInvocationSpec.prototype.getIdGenerationAlg = function () {
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.protos.ChaincodeInvocationSpec.prototype.setIdGenerationAlg = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+proto.protos.ChaincodeInvocationSpec.prototype.setIdGenerationAlg = function (value) {
+    jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1703,20 +1697,20 @@ proto.protos.ChaincodeInvocationSpec.prototype.setIdGenerationAlg = function(val
  * optional SenderSpec sender_spec = 3;
  * @return {?proto.protos.SenderSpec}
  */
-proto.protos.ChaincodeInvocationSpec.prototype.getSenderSpec = function() {
-  return /** @type{?proto.protos.SenderSpec} */ (
-    jspb.Message.getWrapperField(this, proto.protos.SenderSpec, 3));
+proto.protos.ChaincodeInvocationSpec.prototype.getSenderSpec = function () {
+    return /** @type{?proto.protos.SenderSpec} */ (
+        jspb.Message.getWrapperField(this, proto.protos.SenderSpec, 3));
 };
 
 
 /** @param {?proto.protos.SenderSpec|undefined} value */
-proto.protos.ChaincodeInvocationSpec.prototype.setSenderSpec = function(value) {
-  jspb.Message.setWrapperField(this, 3, value);
+proto.protos.ChaincodeInvocationSpec.prototype.setSenderSpec = function (value) {
+    jspb.Message.setWrapperField(this, 3, value);
 };
 
 
-proto.protos.ChaincodeInvocationSpec.prototype.clearSenderSpec = function() {
-  this.setSenderSpec(undefined);
+proto.protos.ChaincodeInvocationSpec.prototype.clearSenderSpec = function () {
+    this.setSenderSpec(undefined);
 };
 
 
@@ -1724,8 +1718,8 @@ proto.protos.ChaincodeInvocationSpec.prototype.clearSenderSpec = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.protos.ChaincodeInvocationSpec.prototype.hasSenderSpec = function() {
-  return jspb.Message.getField(this, 3) != null;
+proto.protos.ChaincodeInvocationSpec.prototype.hasSenderSpec = function () {
+    return jspb.Message.getField(this, 3) != null;
 };
 
 
@@ -1733,8 +1727,8 @@ proto.protos.ChaincodeInvocationSpec.prototype.hasSenderSpec = function() {
  * optional bytes sig = 4;
  * @return {!(string|Uint8Array)}
  */
-proto.protos.ChaincodeInvocationSpec.prototype.getSig = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.protos.ChaincodeInvocationSpec.prototype.getSig = function () {
+    return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
@@ -1743,9 +1737,9 @@ proto.protos.ChaincodeInvocationSpec.prototype.getSig = function() {
  * This is a type-conversion wrapper around `getSig()`
  * @return {string}
  */
-proto.protos.ChaincodeInvocationSpec.prototype.getSig_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getSig()));
+proto.protos.ChaincodeInvocationSpec.prototype.getSig_asB64 = function () {
+    return /** @type {string} */ (jspb.Message.bytesAsB64(
+        this.getSig()));
 };
 
 
@@ -1756,15 +1750,15 @@ proto.protos.ChaincodeInvocationSpec.prototype.getSig_asB64 = function() {
  * This is a type-conversion wrapper around `getSig()`
  * @return {!Uint8Array}
  */
-proto.protos.ChaincodeInvocationSpec.prototype.getSig_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getSig()));
+proto.protos.ChaincodeInvocationSpec.prototype.getSig_asU8 = function () {
+    return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+        this.getSig()));
 };
 
 
 /** @param {!(string|Uint8Array)} value */
-proto.protos.ChaincodeInvocationSpec.prototype.setSig = function(value) {
-  jspb.Message.setProto3BytesField(this, 4, value);
+proto.protos.ChaincodeInvocationSpec.prototype.setSig = function (value) {
+    jspb.Message.setProto3BytesField(this, 4, value);
 };
 
 
@@ -1772,8 +1766,8 @@ proto.protos.ChaincodeInvocationSpec.prototype.setSig = function(value) {
  * @enum {number}
  */
 proto.protos.ConfidentialityLevel = {
-  PUBLIC: 0,
-  CONFIDENTIAL: 1
+    PUBLIC: 0,
+    CONFIDENTIAL: 1
 };
 
 goog.object.extend(exports, proto.protos);

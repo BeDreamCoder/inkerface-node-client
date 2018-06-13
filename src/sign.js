@@ -11,8 +11,9 @@ var ProtoBuf = require('protobufjs');
 var settingsConfig = require('./config');
 var Wallet = require('./wallet').Wallet;
 var Long = require('long');
+var path = require('path');
 
-var builder = ProtoBuf.loadProtoFile("protos/chaincode.proto");
+var builder = ProtoBuf.loadProtoFile(path.join(__dirname + "/../protos/chaincode.proto"));
 var protos = builder.build("protos");
 var SignContent = protos.SignContent;
 
