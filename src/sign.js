@@ -67,10 +67,15 @@ var isValidAddress = function (address) {
     if (typeof address !== 'string') {
         return false;
     }
-    if (address.slice(0, 1) !== settingsConfig.AddressPrefix) {
-        return false;
+    let new_address = address;
+    if (address.slice(0, 1) == settingsConfig.AddressPrefix) {
+        new_address = ethUtils.addHexPrefix(address.slice(1));
+    } else if (address.slice(0, 2) !== '0x') {
+        new_address = ethUtils.addHexPrefix(address);
     }
-    return ethUtils.isValidAddress(ethUtils.addHexPrefix(address.slice(1)));
+    // return ethUtils.isValidAddress(ethUtils.addHexPrefix(address));
+    //console.log(new_address);
+    return ethUtils.isValidAddress(new_address);
 };
 
 var isValidPrivate = function (prikey) {
