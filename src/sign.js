@@ -70,10 +70,13 @@ var signTX = function (ccId, fcn, arg, msg, counter, inkLimit, priKey) {
     var senderAddress = ethUtils.privateToAddress(new Buffer(priKey, "hex"));
     var senderSpec = {
         sender: Buffer.from(settingsConfig.AddressPrefix + senderAddress.toString("hex")),
-        counter: Long.fromString(counter.toString()),
         inkLimit: Buffer.from(inkLimit),
         msg: Buffer.from(msg)
     };
+    if (counter != 0) {
+        senderSpec.counter = Long.fromString(counter.toString());
+    }
+
     args.push(Buffer.from(fcn ? fcn : 'invoke', 'utf8'));
     for (var i = 0; i < arg.length; i++) {
         args.push(Buffer.from(arg[i], 'utf8'));
